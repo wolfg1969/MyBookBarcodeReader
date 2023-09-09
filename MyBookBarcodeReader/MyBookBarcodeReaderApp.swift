@@ -2,7 +2,7 @@
 //  MyBookBarcodeReaderApp.swift
 //  MyBookBarcodeReader
 //
-//  Created by 郭勇 on 2023/9/9.
+//  Created by wolfg1969 on 2023/9/9.
 //
 
 import SwiftUI
