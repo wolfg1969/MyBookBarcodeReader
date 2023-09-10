@@ -1,13 +1,119 @@
 {
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
   "images" : [
     {
+      "filename" : "icon-20@2x.png",
+      "scale" : "2x",
+      "idiom" : "universal",
+      "size" : "20x20",
+      "platform" : "ios"
+    },
+    {
+      "size" : "20x20",
+      "filename" : "icon-20@3x.png",
+      "scale" : "3x",
+      "platform" : "ios",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "icon-29@2x.png",
+      "scale" : "2x",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "29x29"
+    },
+    {
+      "filename" : "icon-29@3x.png",
+      "scale" : "3x",
+      "size" : "29x29",
+      "idiom" : "universal",
+      "platform" : "ios"
+    },
+    {
+      "idiom" : "universal",
+      "size" : "38x38",
+      "filename" : "icon-38@2x.png",
+      "platform" : "ios",
+      "scale" : "2x"
+    },
+    {
+      "platform" : "ios",
+      "filename" : "icon-38@3x.png",
+      "size" : "38x38",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "filename" : "icon-40@2x.png"
+    },
+    {
+      "filename" : "icon-40@3x.png",
+      "idiom" : "universal",
+      "size" : "40x40",
+      "platform" : "ios",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "icon-60@2x.png",
+      "scale" : "2x",
+      "platform" : "ios",
+      "size" : "60x60"
+    },
+    {
+      "filename" : "icon-60@3x.png",
+      "idiom" : "universal",
+      "size" : "60x60",
+      "platform" : "ios",
+      "scale" : "3x"
+    },
+    {
+      "platform" : "ios",
+      "size" : "64x64",
+      "scale" : "2x",
+      "filename" : "icon-64@2x.png",
+      "idiom" : "universal"
+    },
+    {
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "64x64",
+      "filename" : "icon-64@3x.png"
+    },
+    {
+      "platform" : "ios",
+      "scale" : "2x",
+      "idiom" : "universal",
+      "filename" : "icon-68@2x.png",
+      "size" : "68x68"
+    },
+    {
+      "filename" : "icon-76@2x.png",
+      "platform" : "ios",
+      "scale" : "2x",
+      "idiom" : "universal",
+      "size" : "76x76"
+    },
+    {
+      "filename" : "icon-83_5@2x.png",
+      "platform" : "ios",
+      "size" : "83.5x83.5",
+      "scale" : "2x",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "ios-marketing.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
     }
-  ],
-  "info" : {
-    "author" : "xcode",
-    "version" : 1
-  }
+  ]
 }
