@@ -13,7 +13,8 @@ struct BookBarcodeRow: View {
     
     var body: some View {
         HStack {
-            Text(barcode.value)
+            Text(barcode.label)
+                .frame(maxWidth: .infinity, alignment: .center)
             
             Spacer()
         }

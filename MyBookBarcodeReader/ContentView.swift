@@ -21,8 +21,7 @@ struct CustomButtonStyle: ButtonStyle {
 struct ContentView: View {
     //initialize the scanner as off
     @State var isPresentingScanner = false
-    @State var scannedCodes: [BookBarcode] = initBookBarcodes;
-    @State var currentSlot: Int = 0;
+    @StateObject var bookBarcodeStore: BookBarcodeStore = BookBarcodeStore();
     
     var body: some View {
         //now use VStack to vertically place views inside
@@ -35,35 +34,27 @@ struct ContentView: View {
                 showViewfinder: false,
                 completion: { result in
                     if case let .success(code) = result{
-                        var barcode = BookBarcode(value: code.string)
-                        if (self.currentSlot < 10) {
-                            self.scannedCodes[currentSlot] = barcode
-                        } else {
-                            self.scannedCodes.append(barcode)
-                        }
-                        self.currentSlot += 1
+                        self.bookBarcodeStore.add(value: code.string)
                     }
                     
                 }
                 
             )
-            BookBarcodeList(bookBarcodes: self.scannedCodes)
+            BookBarcodeList(bookBarcodeStore: self.bookBarcodeStore)
             Spacer()
             Spacer()
             HStack(spacing: 10) {
                 Button("Copy") {
                     print("Copy Button pressed!")
-                    UIPasteboard.general.string = self.scannedCodes.map() {$0.value}.joined(separator: "\n")
+                    UIPasteboard.general.string = self.bookBarcodeStore.getAllValues()
                     // kSystemSoundID_Vibrate
                     AudioServicesPlayAlertSound(SystemSoundID(1300))
-//                    self.scannedCodes.removeAll()
                 }
                 .buttonStyle(CustomButtonStyle())
                 
                 Button("Clear") {
                     print("Clear Button pressed!")
-                    self.scannedCodes = initBookBarcodes
-                    self.currentSlot = 0
+                    self.bookBarcodeStore.reset()
                     AudioServicesPlayAlertSound(SystemSoundID(1301))
                 }
                 .buttonStyle(CustomButtonStyle())

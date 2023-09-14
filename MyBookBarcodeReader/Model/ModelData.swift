@@ -7,4 +7,4 @@
 
 import Foundation
 
-var initBookBarcodes: [BookBarcode] = [BookBarcode](repeating: BookBarcode(value: ""), count: 10)
+// var initBookBarcodes: [BookBarcode] = [BookBarcode](repeating: BookBarcode(value: ""), count: 10)

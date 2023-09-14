@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 struct BookBarcodeList: View {
-    var bookBarcodes: [BookBarcode]
+    @ObservedObject var bookBarcodeStore: BookBarcodeStore
     var body: some View {
-        List(bookBarcodes) { barcode in
+        List(bookBarcodeStore.getAllBarcodes()) { barcode in
             BookBarcodeRow(barcode: barcode)
         }
     }
@@ -20,7 +20,7 @@ struct BookBarcodeList: View {
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        BookBarcodeList(bookBarcodes: [])
+        BookBarcodeList(bookBarcodeStore: BookBarcodeStore())
     }
 }
 

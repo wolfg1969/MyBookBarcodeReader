@@ -16,6 +16,7 @@
 		191D82922AAC864400EF2672 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 191D82912AAC864400EF2672 /* CodeScanner */; };
 		19343DB72AAC9B34000E41F2 /* BookBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19343DB62AAC9B34000E41F2 /* BookBarcode.swift */; };
 		19343DBB2AAC9C83000E41F2 /* BookBarcodeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19343DBA2AAC9C83000E41F2 /* BookBarcodeRow.swift */; };
+		19B8C63E2AB1CA16008FD688 /* BookBarcodeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B8C63D2AB1CA16008FD688 /* BookBarcodeStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		191D82822AAC5EE800EF2672 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19343DB62AAC9B34000E41F2 /* BookBarcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBarcode.swift; sourceTree = "<group>"; };
 		19343DBA2AAC9C83000E41F2 /* BookBarcodeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBarcodeRow.swift; sourceTree = "<group>"; };
+		19B8C63D2AB1CA16008FD688 /* BookBarcodeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBarcodeStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				1908E67A2AACB52B0024B464 /* ModelData.swift */,
 				19343DB62AAC9B34000E41F2 /* BookBarcode.swift */,
+				19B8C63D2AB1CA16008FD688 /* BookBarcodeStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				191D827E2AAC5EE700EF2672 /* ContentView.swift in Sources */,
 				19343DBB2AAC9C83000E41F2 /* BookBarcodeRow.swift in Sources */,
+				19B8C63E2AB1CA16008FD688 /* BookBarcodeStore.swift in Sources */,
 				1908E6772AACA46F0024B464 /* BookBarcodeList.swift in Sources */,
 				191D827C2AAC5EE700EF2672 /* MyBookBarcodeReaderApp.swift in Sources */,
 				19343DB72AAC9B34000E41F2 /* BookBarcode.swift in Sources */,
