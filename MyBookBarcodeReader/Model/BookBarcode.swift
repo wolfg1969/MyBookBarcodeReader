@@ -12,28 +12,20 @@ struct BookBarcode: Hashable, Codable, Identifiable {
     var value: String
     var label: String {
         if (value.count == 13) {
-            var start = value.index(value.startIndex, offsetBy: 0)
-            var end = value.index(value.startIndex, offsetBy: 3)
-            var ret = String(value[start..<end])
-            ret += "-"
-            start = value.index(value.startIndex, offsetBy: 3)
-            end = value.index(value.startIndex, offsetBy: 3)
-            ret += String(value[start...end])
-            ret += "-"
-            start = value.index(value.startIndex, offsetBy: 4)
-            end = value.index(value.startIndex, offsetBy: 6)
-            ret += String(value[start...end])
-            ret += "-"
-            start = value.index(value.startIndex, offsetBy: 7)
-            end = value.index(value.endIndex, offsetBy: -2)
-            ret += String(value[start...end])
-            ret += "-"
-            start = value.index(value.endIndex, offsetBy: -1)
-            end = value.index(value.endIndex, offsetBy: -1)
-            ret += String(value[start...end])
-            
+            var ret = ["📘 ", "📗 ", "📙 "].randomElement()!
+            ret += getBarcodePart(start: 0, end: 3) + "-"
+            ret += getBarcodePart(start: 3, end: 4) + "-"
+            ret += getBarcodePart(start: 4, end: 7) + "-"
+            ret += getBarcodePart(start: 7, end: 12) + "-"
+            ret += getBarcodePart(start: 12, end: 13)
             return ret
         }
         return value
+    }
+    
+    private func getBarcodePart(start: Int, end: Int) -> String {
+        let startIndex = value.index(value.startIndex, offsetBy: start)
+        let endIndex = value.index(value.startIndex, offsetBy: end)
+        return String(value[startIndex..<endIndex])
     }
 }

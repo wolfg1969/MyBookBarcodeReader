@@ -11,8 +11,17 @@ import SwiftUI
 struct BookBarcodeList: View {
     @ObservedObject var bookBarcodeStore: BookBarcodeStore
     var body: some View {
-        List(bookBarcodeStore.getAllBarcodes()) { barcode in
-            BookBarcodeRow(barcode: barcode)
+        
+        let barcodes = bookBarcodeStore.getAllBarcodes()
+            .enumerated().map({ $0 })
+        
+        List() {
+            Section(header: Text("Books")) {
+                ForEach(barcodes, id: \.1.self) { index, barcode in
+                    BookBarcodeRow(index: index, barcode: barcode)
+                }
+            }
+            
         }
     }
 }

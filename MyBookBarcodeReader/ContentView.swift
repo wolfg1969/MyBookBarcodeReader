@@ -26,19 +26,17 @@ struct ContentView: View {
     var body: some View {
         //now use VStack to vertically place views inside
         //set up spacing
-        VStack(spacing: 10){
+        VStack(spacing: 5){
             CodeScannerView(
                 codeTypes: [.ean13],
                 scanMode: .continuous,
                 // scanInterval: 10,
                 showViewfinder: false,
                 completion: { result in
-                    if case let .success(code) = result{
+                    if case let .success(code) = result {
                         self.bookBarcodeStore.add(value: code.string)
                     }
-                    
                 }
-                
             )
             BookBarcodeList(bookBarcodeStore: self.bookBarcodeStore)
             Spacer()

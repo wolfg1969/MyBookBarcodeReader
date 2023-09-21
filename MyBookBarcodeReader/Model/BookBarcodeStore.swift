@@ -20,7 +20,7 @@ class BookBarcodeStore: ObservableObject {
     }
     
     func getAllValues() -> String {
-        return self.barcodes.map() {$0.value}.joined(
+        return Set(self.barcodes.map() {$0.value}).joined(
             separator: "\n").trimmingCharacters(
                 in: .newlines) + "\n"
     }
